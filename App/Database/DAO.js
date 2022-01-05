@@ -25,9 +25,11 @@ let getToday = () => {
   yesterdayTime.setTime(yesterdayTime.getDate() - 1)
   let temporary = realm.objects('Water').filtered("date > $0", yesterdayTime);
   if (!temporary.length){
+    let today = new Date()
+    today.setHours(0, 0, 0, 0)
     realm.write(() => {
       const water = realm.create('Water', {
-        date: new Date(),
+        date: today,
         current: 0,
         goal: 125,
       })
