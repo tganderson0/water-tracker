@@ -11,8 +11,18 @@ WaterSchema.schema = {
     }
 };
 
+class SettingsSchema extends Realm.Object {}
+SettingsSchema.schema = {
+    name: 'Settings',
+    properties: {
+        goalAmount: 'float',
+        preferredUnits: 'string',
+        standardDrinkSize: 'float?',
+    }
+}
+
 // Create realm
-let realm = new Realm({schema: [WaterSchema], schemaVersion: 1});
+let realm = new Realm({schema: [WaterSchema, SettingsSchema], schemaVersion: 1});
 
 // Export the realm
 export default realm;

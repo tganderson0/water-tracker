@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		3437D6C72786A25B00541DFD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3437D6C52786A25B00541DFD /* Ionicons.ttf */; };
 		594A490210D2351837E0F083 /* libPods-WaterTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7311734EC2F1E7B318B121 /* libPods-WaterTracker.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D4576C3608478FBE125B5AE9 /* libPods-WaterTracker-WaterTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FDF8D2886A4A5B50CF6CE0 /* libPods-WaterTracker-WaterTrackerTests.a */; };
@@ -30,20 +31,36 @@
 		00E356EE1AD99517003FC87E /* WaterTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* WaterTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterTrackerTests.m; sourceTree = "<group>"; };
+		00E9AD87CB21436599B009E2 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		0E3C4C2779DE4DB6A5196804 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* WaterTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WaterTracker/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = WaterTracker/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WaterTracker/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WaterTracker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WaterTracker/main.m; sourceTree = "<group>"; };
+		146528F1257D46029C56D065 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		22B98CEB3030434E9C2C873D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		24184EA293804AAABDDA7C1F /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		3437D6C52786A25B00541DFD /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		4EE2CD688B9F4BAD998C1E41 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		71774E0237A5412289A02F23 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		74EB045C49ABE2036481B372 /* Pods-WaterTracker-WaterTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTracker-WaterTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-WaterTracker-WaterTrackerTests/Pods-WaterTracker-WaterTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A7311734EC2F1E7B318B121 /* libPods-WaterTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = WaterTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		838FE03DCA6847EFB6CBD2D9 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		87EAB56B4DE541AC875D8098 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		922615E50DCC4194A0607684 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		BA2E475656B1474CA7AFB384 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		C1FA5F26FE96DCB617CF2F00 /* Pods-WaterTracker-WaterTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTracker-WaterTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterTracker-WaterTrackerTests/Pods-WaterTracker-WaterTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4BFBD4B76D688BF830362E2 /* Pods-WaterTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTracker.debug.xcconfig"; path = "Target Support Files/Pods-WaterTracker/Pods-WaterTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FDF8D2886A4A5B50CF6CE0 /* libPods-WaterTracker-WaterTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaterTracker-WaterTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84914B3247042BAA7B81684 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		E01BBF00EACC40CA982629FB /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F560D61844B9443880ACFA70 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		F9C654D7A4119A1F45872B44 /* Pods-WaterTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterTracker.release.xcconfig"; path = "Target Support Files/Pods-WaterTracker/Pods-WaterTracker.release.xcconfig"; sourceTree = "<group>"; };
+		FBDAA5728BAC40CD952B80FF /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +103,7 @@
 		13B07FAE1A68108700A75B9A /* WaterTracker */ = {
 			isa = PBXGroup;
 			children = (
+				3437D6C42786A24A00541DFD /* Fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -104,6 +122,14 @@
 				D7FDF8D2886A4A5B50CF6CE0 /* libPods-WaterTracker-WaterTrackerTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3437D6C42786A24A00541DFD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3437D6C52786A25B00541DFD /* Ionicons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		65970DD3B0C60F533EACFC30 /* Pods */ = {
@@ -133,6 +159,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				65970DD3B0C60F533EACFC30 /* Pods */,
+				86D1555E9A634D10BD4394EF /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -146,6 +173,28 @@
 				00E356EE1AD99517003FC87E /* WaterTrackerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		86D1555E9A634D10BD4394EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F560D61844B9443880ACFA70 /* AntDesign.ttf */,
+				87EAB56B4DE541AC875D8098 /* Entypo.ttf */,
+				00E9AD87CB21436599B009E2 /* EvilIcons.ttf */,
+				4EE2CD688B9F4BAD998C1E41 /* Feather.ttf */,
+				146528F1257D46029C56D065 /* FontAwesome.ttf */,
+				BA2E475656B1474CA7AFB384 /* FontAwesome5_Brands.ttf */,
+				0E3C4C2779DE4DB6A5196804 /* FontAwesome5_Regular.ttf */,
+				71774E0237A5412289A02F23 /* FontAwesome5_Solid.ttf */,
+				922615E50DCC4194A0607684 /* Fontisto.ttf */,
+				22B98CEB3030434E9C2C873D /* Foundation.ttf */,
+				838FE03DCA6847EFB6CBD2D9 /* MaterialCommunityIcons.ttf */,
+				FBDAA5728BAC40CD952B80FF /* MaterialIcons.ttf */,
+				D84914B3247042BAA7B81684 /* Octicons.ttf */,
+				E01BBF00EACC40CA982629FB /* SimpleLineIcons.ttf */,
+				24184EA293804AAABDDA7C1F /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3437D6C72786A25B00541DFD /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

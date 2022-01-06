@@ -1,12 +1,24 @@
-import React, { useState } from "react";
-import { Text, SafeAreaView, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback } from "react-native";
-import { getAllWater, getToday, findByGoal, resetDatabase, addWater } from "./Database/DAO";
+import React, { useState, useEffect } from "react";
+import { Text, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback, Animated } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { getAllWater, getToday, findByGoal, resetDatabase, addWater, getSettings } from "../Database/DAO";
 import ProgressCircle from 'react-native-progress-circle';
+import { useIsFocused } from "@react-navigation/native";
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
-const Test = () => {
+const Home = () => {
   // takes the form {date: xxx, current: xxx, goal: xxx}
   const [water, setWater] = useState(getToday()[0]);
-  const [waterPerPress, setWaterPerPress] = useState();
+  const [waterPerPress, setWaterPerPress] = useState(getSettings()[0].standardDrinkSize ? String(getSettings()[0].standardDrinkSize) : '');
+  const [unit, setUnit] = useState(getSettings()[0].preferredUnits)
+  const isFocused = useIsFocused()
+
+    useEffect(() => {
+        setWater(getToday()[0])
+        setWaterPerPress(getSettings()[0].standardDrinkSize ? String(getSettings()[0].standardDrinkSize) : '');
+        setUnit(getSettings()[0].preferredUnits)
+    } , [isFocused])
+  
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <SafeAreaView style={{
@@ -22,18 +34,18 @@ const Test = () => {
       >
         <ProgressCircle
           percent={water.current/water.goal * 100}
-          radius={100}
-          borderWidth={16}
+          radius={150}
+          borderWidth={32}
           color="#3399FF"
           shadowColor="#999"
           bgColor="#fff"
           >
-          <Text style={{ fontSize: 18 }}>{Math.round(water.current/water.goal * 100)}%</Text>
+          <Text style={{ fontSize: 36 }}>{Math.round(water.current/water.goal * 100)}%</Text>
         </ProgressCircle>
       </View>
       
-      <Text>Current Water: {water.current} mL</Text>
-      <Text>Goal: {water.goal} mL</Text>
+      <Text>Current Water: {water.current} {unit}</Text>
+      <Text>Goal: {water.goal} {unit}</Text>
       {/* <Text>{JSON.stringify(water)}</Text> */}
       <TextInput 
       value={waterPerPress} 
@@ -51,10 +63,10 @@ const Test = () => {
         addWater(water, -parseFloat(waterPerPress))
         setWater(getToday()[0])
       } } />
-        <Button title="Reset Database" onPress={() => {
+        {/* <Button title="Reset Database" onPress={() => {
           resetDatabase()
           setWater(getToday()[0])
-        }} /> 
+        }} />  */}
     </SafeAreaView>
     </TouchableWithoutFeedback>
     
@@ -73,7 +85,7 @@ const styles = StyleSheet.create({
 
 })
 
-export default Test;
+export default Home;
 
 // Code that shows how to add to database
 // for(let i = 0; i < 3; i++){
