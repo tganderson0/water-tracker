@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Text, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback, Animated } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getAllWater, getToday, findByGoal, resetDatabase, addWater, getSettings } from "../Database/DAO";
-import ProgressCircle from 'react-native-progress-circle';
 import { useIsFocused } from "@react-navigation/native";
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
@@ -32,16 +31,21 @@ const Home = () => {
           marginTop: 32,
         }}
       >
-        <ProgressCircle
-          percent={water.current/water.goal * 100}
-          radius={150}
-          borderWidth={32}
-          color="#3399FF"
-          shadowColor="#999"
-          bgColor="#fff"
-          >
-          <Text style={{ fontSize: 36 }}>{Math.round(water.current/water.goal * 100)}%</Text>
-        </ProgressCircle>
+        <AnimatedCircularProgress
+          size={300}
+          width={32}
+          rotation={0}
+          fill={Math.round(water.current/water.goal * 100)}
+          tintColor="#3399FF"
+          backgroundColor="#999">
+          {
+            (fill) => (
+              <Text style={{ fontSize: 36}}>
+                { Math.round(water.current/water.goal * 100) }%
+              </Text>
+            )
+          }
+        </AnimatedCircularProgress>
       </View>
       
       <Text>Current Water: {water.current} {unit}</Text>
