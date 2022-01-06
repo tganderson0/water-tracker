@@ -21,7 +21,7 @@ const App = () => {
 
     dark: {
       backgroundColor: 'black',
-      color: 'white'
+      color: 'rgb(28, 28, 30)'
     },
 
   })
@@ -37,8 +37,7 @@ const App = () => {
       <Tab.Navigator 
         screenOptions={{
           tabBarStyle: style,
-          headerStyle: style,
-          headerTitleStyle: style,
+          headerShown: false,
           
         }}
       >

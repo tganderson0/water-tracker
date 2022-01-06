@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Text, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback, Appearance } from "react-native";
+import { Text, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback, Appearance, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getToday, resetDatabase, addWater, getSettings } from "../Database/DAO";
 import { useIsFocused } from "@react-navigation/native";
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const Home = () => {
   const [water, setWater] = useState(getToday()[0]);
@@ -49,6 +51,7 @@ const Home = () => {
       flex: 1,
       flexDirection: 'column',
       alignItems: 'center',
+      justifyContent: 'center',
       backgroundColor: isLight ? 'rgb(242, 242, 247)' : 'rgb(28, 28, 30)'
     }}>
       <View
@@ -84,21 +87,40 @@ const Home = () => {
       style={styles.input}
       keyboardType="numeric"
       />
-      <Button title="Add Water" onPress={() => {
-        if (waterPerPress !== '')
-        addWater(water, parseFloat(waterPerPress))
-        setWater(getToday()[0])
-        }}/>
-
-      <Button title="Subtract Water" onPress={() => {
+      <View style={{flexDirection: 'row', marginTop: 8 }}>
+      {/* <Button title="-" onPress={() => {
         if (waterPerPress !== '')
         addWater(water, -parseFloat(waterPerPress))
         setWater(getToday()[0])
-      } } />
-        <Button title="Reset Database" onPress={() => {
-          resetDatabase()
-          setWater(getToday()[0])
-        }} /> 
+      } } /> */}
+      
+      <TouchableOpacity onPress={() => {
+        if (waterPerPress !== '')
+        addWater(water, -parseFloat(waterPerPress))
+        setWater(getToday()[0])
+      }} >
+        <FontAwesomeIcon icon={faMinusCircle} color='#3399FF' size={80}/>
+      </TouchableOpacity>
+
+      <View style={{ margin: 32}} />
+
+      <TouchableOpacity onPress={() => {
+        if (waterPerPress !== '')
+        addWater(water, parseFloat(waterPerPress))
+        setWater(getToday()[0])
+        }}>
+          <FontAwesomeIcon icon={faPlusCircle} color='#3399FF' size={80}/>
+        </TouchableOpacity>
+
+      {/* <Button title="+" onPress={() => {
+        if (waterPerPress !== '')
+        addWater(water, parseFloat(waterPerPress))
+        setWater(getToday()[0])
+        }}/> */}
+      </View>
+      
+      
+
     </SafeAreaView>
     </TouchableWithoutFeedback>
     

@@ -40,6 +40,7 @@ const Settings = () => {
       flex: 1,
       flexDirection: 'column',
       alignItems: 'center',
+      justifyContent: 'center',
       padding: 8,
       backgroundColor: isLight ? 'rgb(242, 242, 247)' : 'rgb(28, 28, 30)',
     }}
