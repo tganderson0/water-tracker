@@ -21,8 +21,16 @@ SettingsSchema.schema = {
     }
 }
 
+class StreakSchema extends Realm.Object {}
+StreakSchema.schema = {
+    name: 'Streak',
+    properties: {
+        currentStreak: 'int',
+    }
+}
+
 // Create realm
-let realm = new Realm({schema: [WaterSchema, SettingsSchema], schemaVersion: 1});
+let realm = new Realm({schema: [WaterSchema, SettingsSchema, StreakSchema], schemaVersion: 1});
 
 // Export the realm
 export default realm;

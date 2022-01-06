@@ -6,6 +6,14 @@ let getAllWater = () => {
   return realm.objects('Water');
 }
 
+let getPastWeek = () => {
+  let weekAgo = new Date()
+  weekAgo.setDate(weekAgo.getDate() - 8)
+  weekAgo.setHours(0, 0, 0, 0)
+
+  return realm.objects('Water').filtered("date >= $0", weekAgo)
+}
+
 let addNewWater = (_current = 0, _goal = 125) => {
   realm.write(() => {
       const water = realm.create('Water', {
@@ -20,6 +28,10 @@ let getWaterByDate = (_date) => {
   return realm.objects('Water').filtered("date = $0", _date)
 }
 
+let getStreak = () => {
+  return realm.objects('Streak')[0]
+}
+
 let getToday = () => {
   let today = new Date()
   today.setHours(0, 0, 0, 0)
@@ -31,6 +43,21 @@ let getToday = () => {
         current: 0,
         goal: 125,
       })
+      let yesterday = new Date()
+      yesterday.setDate(yesterday.getDate() - 1)
+      yesterday.setHours(0, 0, 0, 0)
+      let resultYesterday = getWaterByDate(yesterday)
+      let check = realm.objects('Streak')
+      if (!check.length) realm.create('Streak', {
+        currentStreak: 0,
+      })
+      let streak = realm.objects('Streak')[0]
+      if (!resultYesterday.length || resultYesterday[0].current < resultYesterday[0].goal){
+        streak.currentStreak = 0
+      }
+      else{
+        streak.currentStreak += 1
+      }
     })
     temporary = realm.objects('Water').filtered("date = $0", today);
   }
@@ -92,4 +119,6 @@ addWater,
 findByGoal,
 getSettings,
 updateSettings,
+getStreak,
+getPastWeek,
 }
