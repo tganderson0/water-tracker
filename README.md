@@ -1,5 +1,9 @@
 # Water Tracker
 
+## Download!
+
+[Links to the Apple App Store](https://apps.apple.com/us/app/water-inator/id1603693735)
+
 ## About
 
 I created this app with the purpose of learning more about creating apps with React Native. I wanted to create something that would be useful to me as well.
