@@ -21,7 +21,7 @@ const App = () => {
 
     dark: {
       backgroundColor: 'black',
-      color: 'rgb(28, 28, 30)'
+      color: 'white'
     },
 
   })

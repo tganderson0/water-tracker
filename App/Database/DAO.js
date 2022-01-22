@@ -35,13 +35,15 @@ let getStreak = () => {
 let getToday = () => {
   let today = new Date()
   today.setHours(0, 0, 0, 0)
+  
   let temporary = realm.objects('Water').filtered("date = $0", today);
   if (!temporary.length){
+    let settings = getSettings()[0];
     realm.write(() => {
       const water = realm.create('Water', {
         date: today,
         current: 0,
-        goal: 125,
+        goal: settings.goalAmount,
       })
       let yesterday = new Date()
       yesterday.setDate(yesterday.getDate() - 1)

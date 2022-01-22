@@ -16,9 +16,13 @@ const Stats = () => {
     return Math.round((allDays.slice(0, allDays.length-1).reduce(sum, 0) / (allDays.length - 1)) * 100)
   }
 
+  let average = getAverageCompletion(allDays);
+
+
     useEffect(() => {
         setAllDays(getPastWeek());
         setStreak(getStreak());
+        average = getAverageCompletion(allDays);
     } , [isFocused])
 
 
@@ -48,7 +52,7 @@ const Stats = () => {
 
       <Text style={styles.text}>Streak</Text>
       <Text style={styles.text}>{streak.currentStreak} day{streak.currentStreak == 1 ? '' : 's'}</Text>
-      <Text style={styles.text}>Average per day: {getAverageCompletion(allDays)}%</Text>
+      <Text style={styles.text}>Average per day: {Number.isNaN(average) ? 0 : average}%</Text>
     </SafeAreaView>
   )
 }
