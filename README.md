@@ -14,8 +14,10 @@ Dark mode supported as well!
 
 ## Screenshots
 
-![Light Mode Home](images/lightmodehome.jpeg)
-![Dark Mode Home](images/darkmodehome.jpeg)
-![Light Mode No Streak](images/lightmodenostreak.jpeg)
-![Light Mode Streak](images/lightmodestreak.jpeg)
-![Light Mode Settings](images/lightmodesettings.jpeg)
+<div style="display: 'flex'">
+  <img src="images/lightmodehome.jpeg" alt="Light Mode Home" width="auto" height="300px" />
+  <img src="images/darkmodehome.jpeg" alt="Dark Mode Home" width="auto" height="300px" />
+  <img src="images/lightmodenostreak.jpeg" alt="Light Mode No Streak" width="auto" height="300px" />
+  <img src="images/lightmodestreak.jpeg" alt="Light Mode Streak" width="auto" height="300px" />
+  <img src="images/lightmodesettings.jpeg" alt="Light Mode Settings" width="auto" height="300px" />
+</div>
