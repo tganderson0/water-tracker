@@ -16,6 +16,10 @@ I chose to not specify a particular unit for the app, which allows you to track 
 
 Dark mode supported as well!
 
+## Future work
+
+* Allow the app to give data to Apple Health app, using [this library](https://github.com/agencyenterprise/react-native-health).
+
 ## Screenshots
 
 <div style="display: 'flex'">
