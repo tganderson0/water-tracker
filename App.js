@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { Appearance, StyleSheet } from "react-native";
+import { StyleSheet, useColorScheme } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./App/Screens/Home";
 import Stats from "./App/Screens/Stats";
@@ -26,11 +26,12 @@ const App = () => {
 
   })
 
-  const [style, setStyle] = useState(Appearance.getColorScheme() === 'light' ? styles.light : styles.dark)
+  const isDarkMode = useColorScheme() === 'dark';
+  const [style, setStyle] = useState(isDarkMode ? styles.light : styles.dark)
 
-  Appearance.addChangeListener(() => {
-    setStyle(Appearance.getColorScheme() === 'light' ? styles.light : styles.dark)
-  })
+  useEffect(() => {
+    setStyle(isDarkMode ? styles.dark : styles.light)
+  }, [isDarkMode])
 
   return (
     <NavigationContainer>

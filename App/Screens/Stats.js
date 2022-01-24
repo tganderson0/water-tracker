@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, StyleSheet, Text, Appearance } from "react-native";
+import { Button, StyleSheet, Text, Appearance, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getPastWeek, getStreak} from "../Database/DAO";
 import { useIsFocused } from "@react-navigation/native";
@@ -26,11 +26,8 @@ const Stats = () => {
     } , [isFocused])
 
 
-  const [isLight, setIsLight] = useState(Appearance.getColorScheme() === 'light')
+  const isLight = useColorScheme() === 'light';
 
-  Appearance.addChangeListener(() => {
-    setIsLight(Appearance.getColorScheme() === 'light')
-  })
   const styles = StyleSheet.create({
     text: {
       fontSize: 24,

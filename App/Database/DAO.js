@@ -69,6 +69,9 @@ let getToday = () => {
 let addWater = (water, amount) => {
   realm.write(() => {
     water.current += amount;
+    if (water.current < 0){
+      water.current = 0;
+    }
   });
 }
 

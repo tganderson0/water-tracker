@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback, Appearance, TouchableOpacity } from "react-native";
+import { Text, Button, View, TextInput, StyleSheet, Keyboard, TouchableWithoutFeedback, Appearance, TouchableOpacity, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getToday, resetDatabase, addWater, getSettings } from "../Database/DAO";
 import { useIsFocused } from "@react-navigation/native";
@@ -15,18 +15,13 @@ const Home = () => {
 
   
 
-  const [isLight, setIsLight] = useState(Appearance.getColorScheme() === 'light')
-
-  Appearance.addChangeListener(() => {
-    setIsLight(Appearance.getColorScheme() === 'light')
-  })
+  const isLight = useColorScheme() === 'light';
   
-
-    useEffect(() => {
-        setWater(getToday()[0])
-        setWaterPerPress(getSettings()[0].standardDrinkSize ? String(getSettings()[0].standardDrinkSize) : '');
-        setUnit(getSettings()[0].preferredUnits)
-    } , [isFocused])
+  useEffect(() => {
+      setWater(getToday()[0])
+      setWaterPerPress(getSettings()[0].standardDrinkSize ? String(getSettings()[0].standardDrinkSize) : '');
+      setUnit(getSettings()[0].preferredUnits)
+  } , [isFocused])
   
 
   const styles = StyleSheet.create({

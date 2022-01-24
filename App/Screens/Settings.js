@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, StyleSheet, TextInput, TouchableWithoutFeedback, Keyboard, Button, Appearance } from "react-native";
+import { Text, StyleSheet, TextInput, TouchableWithoutFeedback, Keyboard, Button, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getSettings, updateSettings } from "../Database/DAO";
 
@@ -10,11 +10,7 @@ const Settings = () => {
   const [units, setUnits] = useState(settings[0].preferredUnits)
   const [drinkSize, setDrinkSize] = useState(settings[0].standardDrinkSize ? String(settings[0].standardDrinkSize) : '')
 
-  const [isLight, setIsLight] = useState(Appearance.getColorScheme() === 'light')
-
-  Appearance.addChangeListener(() => {
-    setIsLight(Appearance.getColorScheme() === 'light')
-  })
+  const isLight = useColorScheme() === 'light';
 
   const styles = StyleSheet.create({
     input: {
